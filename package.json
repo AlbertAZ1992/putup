@@ -9,6 +9,7 @@
     "fs-extra": "^7.0.0",
     "inquirer": "^6.2.0",
     "minimist": "^1.2.0",
+    "moment": "^2.22.2",
     "slash": "^2.0.0"
   }
 }

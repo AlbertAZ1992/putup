@@ -19,6 +19,14 @@ program
     require('../lib/create')(name, options);
   });
 
+program
+  .command('post <post-name>')
+  .description('Post a new markdown file with putup')
+  .option('-f, --force', 'Overwrite file if it exists')
+  .action((name, cmd) => {
+    const options = cleanArgs(cmd)
+    require('../lib/post')(name, options);
+  })
 
 
 // // add some useful info on help
