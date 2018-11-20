@@ -26,16 +26,16 @@ program
   .action((name, cmd) => {
     const options = cleanArgs(cmd)
     require('../lib/post')(name, options);
-  })
+  });
 
-
-// // add some useful info on help
-// program.on('--help', () => {
-//   console.log()
-//   console.log(`  Run ${chalk.cyan(`vue <command> --help`)} for detailed usage of given command.`)
-//   console.log()
-// })
-
+program
+  .command('build [entry]')
+  .description('Build blog files by putup')
+  .option('-d, --dest <dir>', 'output directory (default: dist)')
+  .action((name, cmd) => {
+    const options = cleanArgs(cmd)
+    require('../lib/build')(name, options);
+  });
 
 program.on('--help', () => {
   console.log('  Examples:');
@@ -52,11 +52,9 @@ function camelize(str) {
 }
 
 function cleanArgs(cmd) {
-  const args = {}
+  const args = {};
   cmd.options.forEach(o => {
     const key = camelize(o.long.replace(/^--/, ''))
-    // if an option is not present and Command has a method with the same name
-    // it should not be copied
     if (typeof cmd[key] !== 'function' && typeof cmd[key] !== 'undefined') {
       args[key] = cmd[key]
     }
