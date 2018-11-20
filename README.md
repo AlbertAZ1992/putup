@@ -2,18 +2,18 @@
 ### init blog
 
 ```
-$ yarn run start init <blogfolder>
+$ node bin/putup create blog <blogfolder>
 $ cd <blogfolder>
 ```
 
 ### generate a new post
 
 ```
-$ yarn run start post <postname>
+$ node bin/putup post nihao <postname>
 ```
 
-if the file has been generated, following warning will be printed:
+build all posts
 
 ```
-New post <postname> has been created
+$ node bin/putup build -d dist
 ```
