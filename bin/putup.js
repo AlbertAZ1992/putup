@@ -29,7 +29,7 @@ program
   });
 
 program
-  .command('build [entry]')
+  .command('build [dist]')
   .description('Build blog files by putup')
   .option('-d, --dest <dir>', 'output directory (default: dist)')
   .action((name, cmd) => {
