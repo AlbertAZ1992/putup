@@ -33,6 +33,15 @@ program
     require('../lib/build')(options);
   });
 
+program
+  .command('preview')
+  .description('Preview blog site by putup')
+  .option('-d, --dest <dir>', 'static directory (default: dist)')
+  .action((cmd) => {
+    const options = cleanArgs(cmd)
+    require('../lib/preview')(options);
+  });
+
 program.on('--help', () => {
   console.log('  Examples:');
   console.log('');
