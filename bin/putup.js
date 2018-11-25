@@ -1,8 +1,4 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const slash = require('slash');
-const minimist = require('minimist');
 
 const program = require('commander');
 
@@ -29,12 +25,12 @@ program
   });
 
 program
-  .command('build [dist]')
+  .command('build')
   .description('Build blog files by putup')
   .option('-d, --dest <dir>', 'output directory (default: dist)')
-  .action((name, cmd) => {
+  .action((cmd) => {
     const options = cleanArgs(cmd)
-    require('../lib/build')(name, options);
+    require('../lib/build')(options);
   });
 
 program.on('--help', () => {
