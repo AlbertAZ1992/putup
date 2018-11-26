@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title>{{config.title|escape}}</title>
+  <title>{{title | escape | title }}</title>
 </head>
 
 <body>
-  <h1>{{post.title|escape}}</h1>
-  <p>日期: {{post.date|escape}}</p>
+  <h1>{{title| escape | title}}</h1>
+  <p>日期: {{date| escape}}</p>
   <hr>
-  <div class="post-content">{{post.content}}</div>
+  <div class="post-content">{{content}}</div>
 </body>
 
 </html>
