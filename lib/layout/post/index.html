@@ -1,0 +1,14 @@
+{% extends "../layout.html" %}
+
+{% block title %}
+{{ title | escape | title }}
+{% endblock %}
+
+{% block content %}
+  <h1>{{title| escape | title}}</h1>
+  <p>日期: {{date| escape}}</p>
+  <hr>
+  <div class="post-content">
+    {{ content }}
+  </div>
+{% endblock %}
