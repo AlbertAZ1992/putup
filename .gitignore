@@ -3,3 +3,5 @@ node_modules
 blog
 posts
 dist
+assets
+config.json

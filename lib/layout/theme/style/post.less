@@ -1,5 +1,57 @@
-@import './color.less';
+@import './variable.less';
+@import './common.less';
+@import './header.less';
+
+.post-container {
+  width: @width-post;
+  margin: @margin-small auto;
+  padding: @padding-base;
+}
+
+.post-header {
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  .post-title {
+    line-height: @line-height-medium;
+    margin-bottom: @margin-small;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      z-index: -1;
+      width: 100%;
+      height: 9px;
+      background: @color-sin;
+    }
+  }
+  .post-time {
+    font-size: @font-size-small;
+    font-weight: @font-weight-light;
+    line-height: @line-height-medium;
+    margin-bottom: @margin-base;
+    color: @color-gray;
+  }
+
+}
 
 .post-content {
-  background: @bg-color;
+  .hljs {
+    .sans-serif;
+  }
+  p {
+    color: @color-black;
+    font-weight: @font-weight-light;
+    font-size: @font-size-medium;
+    line-height: @line-height-medium;
+    img {
+      width: @width-full;
+      vertical-align: bottom;
+    }
+  }
+  ul {
+    font-weight: @font-weight-light;
+    font-size: @font-size-medium;
+    line-height: @line-height-medium;
+  }
 }

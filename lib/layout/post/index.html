@@ -4,11 +4,29 @@
 {{ title | escape | title }}
 {% endblock %}
 
+
+{% block header %}
+<ul class="header-nav-items">
+  <li class="header-nav-item header-nav-item-home">
+    <h1 class="header-nav-h1">{{site.name}}</h1>
+  </li>
+  <li class="header-nav-item header-nav-item-blog header-nav-item-current">
+    <a class="header-nav-link" href="/posts/"><span>Blog</span></a>
+  </li>
+  <li class="header-nav-item header-nav-item-blog">
+    <a class="header-nav-link" href="/about/"><span>About</span></a>
+  </li>
+</ul>
+{% endblock %}
+
 {% block content %}
-  <h1>{{title| escape | title}}</h1>
-  <p>日期: {{date| escape}}</p>
-  <hr>
+<div class="post-container">
+  <header class="post-header">
+    <h1 class="post-title">{{title| escape | title}}</h1>
+    <p class="post-time">日期: {{date| escape}}</p>
+  </header>
   <div class="post-content">
     {{ content }}
   </div>
+</div>
 {% endblock %}

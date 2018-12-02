@@ -1,0 +1,113 @@
+@import './variable.less';
+
+
+.sans-serif () {
+  font-family:
+    'Montserrat',
+    'PingFang SC',            // OSX ^10.11 & iOS ^9  苹方
+    'Hiragino Sans GB',       // OSX ^10.6            冬青黑体
+    'Helvetica Neue',         // OSX
+    'Microsoft YaHei',        // Win                  微软雅黑
+    'Source Han Sans SC',     // SourceHan - begin    思源黑体
+    Arial,                    // Win
+    sans-serif;               // System Fallback
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all 0.15s ease-out;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  .sans-serif;
+  font-size: @font-size-base;
+  line-height: @line-height-medium;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    .sans-serif;
+    font-weight: @font-weight-bold;
+}
+h1 { font-size: @font-size-huge; }
+h2 { font-size: @font-size-large; }
+h3 { font-size: @font-size-medium; }
+h4 { font-size: @font-size-base; }
+
+a {
+  text-decoration: none;
+  background: @color-sin-alpha;
+  border-bottom: 1px solid @color-sin;
+  color: @color-black;
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: pointer;
+    background: @color-sin;
+    border-bottom: 1px solid @color-black;
+  }
+}
+
+abbr[title] {
+  font-size: @font-size-base;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted
+}
+
+blockquote {
+  margin: @margin-small 0;
+  padding-left: @padding-large;
+  border-left: solid 4px @color-gray;
+}
+
+p {
+  margin: 0;
+}
+
+p + p {
+  margin-top: @padding-small;
+}
+
+.header-level-2 {
+  margin: 0 0 @margin-base;
+  font-size: @font-size-large;
+}
+
+.header-level-inline {
+  margin: 0;
+  font-size: inherit;
+}
+
+.header-level-inline + p {
+  margin-top: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 @padding-base;
+}
+
+.footer {
+    margin-top: @margin-medium;
+    padding: @padding-base 0;
+    font-size: @font-size-small;
+}
+
+.clearfix {
+  zoom:1;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
