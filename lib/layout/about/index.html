@@ -1,0 +1,25 @@
+{% extends "../layout.html" %}
+
+
+
+{% block header %}
+<ul class="header-nav-items">
+  <li class="header-nav-item header-nav-item-home">
+    <h1 class="header-nav-h1">{{site.name}}</h1>
+  </li>
+  <li class="header-nav-item header-nav-item-blog">
+    <a class="header-nav-link" href="/posts/"><span>Blog</span></a>
+  </li>
+<li class="header-nav-item header-nav-item-blog header-nav-item-current">
+    <a class="header-nav-link" href="/about/"><span>About</span></a>
+  </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div class="about-container">
+  <div class="about-content">
+    {{ content }}
+  </div>
+</div>
+{% endblock %}

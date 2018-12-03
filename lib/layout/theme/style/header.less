@@ -2,6 +2,7 @@
 
 .header-nav {
   display: flex;
+  width: @width-post;
   padding: @padding-medium 0;
   .header-nav-logo {
     flex: none;
@@ -22,18 +23,32 @@
     line-height: 1;
     list-style: none;
     .header-nav-item {
+      font-weight: @font-weight-bold;
+      padding: @padding-base/6 0;
+      border-bottom: 3px solid transparent;
       &:not(:last-child) {
         margin-right: @margin-medium;
       }
+      &:hover {
+        border-bottom: 3px solid @color-sin;
+        background: @color-sin;
+      }
       .header-nav-link {
-        background: none;
-        border-bottom: 1px solid @color-atlantis-alpha;
-        color: @color-atlantis;
+        color: @color-black;
+        background: transparent;
+        border-bottom: none;
         &:hover {
-          border-bottom: 1px solid @color-sin-alpha;
-          color: @color-sin;
+          background: transparent;
+          border-bottom: none;
         }
       }
+      &.header-nav-item-current {
+        border-bottom: 3px solid @color-sin;
+        &:hover {
+          background: transparent;
+        }
+      }
+
       &.header-nav-item-home .header-nav-link {
         border-bottom: none;
       }

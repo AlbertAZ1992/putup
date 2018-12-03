@@ -10,10 +10,10 @@
   <li class="header-nav-item header-nav-item-home">
     <h1 class="header-nav-h1">{{site.name}}</h1>
   </li>
-  <li class="header-nav-item header-nav-item-blog header-nav-item-current">
+  <li class="header-nav-item header-nav-item-current">
     <a class="header-nav-link" href="/posts/"><span>Blog</span></a>
   </li>
-  <li class="header-nav-item header-nav-item-blog">
+  <li class="header-nav-item ">
     <a class="header-nav-link" href="/about/"><span>About</span></a>
   </li>
 </ul>
@@ -28,5 +28,28 @@
   <div class="post-content">
     {{ content }}
   </div>
+  <div class="post-links">
+    {% if prev.url %}
+    <div class="post-links-previous">
+      <a href="{{prev.url}}" rel="prev">
+        <span class="post-links-text">Previous</span>
+        <span class="post-links-title">{{prev.title}}</span>
+      </a>
+    </div>
+    {% endif %}
+    {% if next.url %}
+    <div class="post-links-next">
+      <a href="{{next.url}}" rel="prev">
+        <span class="post-links-text">next</span>
+        <span class="post-links-title">{{next.title}}</span>
+      </a>
+    </div>
+    {% endif %}
+</div>
+
+
 </div>
 {% endblock %}
+
+
+

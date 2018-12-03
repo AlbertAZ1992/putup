@@ -1,0 +1,30 @@
+@import './variable.less';
+@import './common.less';
+@import './header.less';
+
+.about-container {
+  width: @width-post;
+  margin: @margin-small auto;
+  padding: @padding-base;
+}
+
+.about-content {
+  .hljs {
+    .sans-serif;
+  }
+  p {
+    color: @color-black;
+    font-weight: @font-weight-light;
+    font-size: @font-size-medium;
+    line-height: @line-height-medium;
+    img {
+      width: @width-full;
+      vertical-align: bottom;
+    }
+  }
+  ul {
+    font-weight: @font-weight-light;
+    font-size: @font-size-medium;
+    line-height: @line-height-medium;
+  }
+}
