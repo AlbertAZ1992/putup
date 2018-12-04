@@ -1,0 +1,38 @@
+{% extends "../layout.html" %}
+
+{% block title %}
+{{ site.name | escape | title }}
+{% endblock %}
+
+
+{% block header %}
+<ul class="header-nav-items">
+  <li class="header-nav-item header-nav-item-home">
+    <h1 class="header-nav-h1">{{site.name}}</h1>
+  </li>
+  <li class="header-nav-item header-nav-item-current">
+    <a class="header-nav-link" href="/"><span>Blog</span></a>
+  </li>
+  <li class="header-nav-item ">
+    <a class="header-nav-link" href="/about/"><span>About</span></a>
+  </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div class="list-container">
+  <div class="list-header">
+    <span class="list-header-title">Latest posts</span>
+  </div>
+  <ul class="list-content">
+    {% for item in list %}
+    <li class="list-content-item">
+      <span class="list-content-item-text">{{item.date| escape}}</span>
+      <a href="{{item.url}}" class="list-content-item-link">
+        <span class="list-content-item-title">{{item.title| escape | title}}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

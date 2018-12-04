@@ -1,6 +1,8 @@
 {% extends "../layout.html" %}
 
-
+{% block title %}
+{{ site.name | escape | title }} About
+{% endblock %}
 
 {% block header %}
 <ul class="header-nav-items">
@@ -8,7 +10,7 @@
     <h1 class="header-nav-h1">{{site.name}}</h1>
   </li>
   <li class="header-nav-item header-nav-item-blog">
-    <a class="header-nav-link" href="/posts/"><span>Blog</span></a>
+    <a class="header-nav-link" href="/"><span>Blog</span></a>
   </li>
 <li class="header-nav-item header-nav-item-blog header-nav-item-current">
     <a class="header-nav-link" href="/about/"><span>About</span></a>
