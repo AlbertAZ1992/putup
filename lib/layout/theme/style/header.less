@@ -3,6 +3,7 @@
 .header-nav {
   display: flex;
   width: @width-post;
+  margin: @margin-small auto;
   padding: @padding-medium 0;
   .header-nav-logo {
     flex: none;
@@ -25,27 +26,35 @@
     .header-nav-item {
       font-weight: @font-weight-bold;
       padding: @padding-base/6 0;
-      border-bottom: 3px solid transparent;
       &:not(:last-child) {
         margin-right: @margin-medium;
       }
-      &:hover {
-        border-bottom: 3px solid @color-sin;
-        background: @color-sin;
-      }
+
       .header-nav-link {
         color: @color-black;
         background: transparent;
         border-bottom: none;
-        &:hover {
+        i {
+          display: inline-block;
+        }
+        &:hover,
+        &:focus,
+        &:active {
           background: transparent;
           border-bottom: none;
+          i {
+            animation: spin 1s linear infinite;
+          }
         }
       }
       &.header-nav-item-current {
-        border-bottom: 3px solid @color-sin;
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
           background: transparent;
+          i {
+            animation: none;
+          }
         }
       }
 
@@ -60,5 +69,14 @@
   }
 }
 
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 

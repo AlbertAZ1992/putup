@@ -42,6 +42,7 @@ h4 { font-size: @font-size-base; }
 
 a {
   text-decoration: none;
+  outline: none;
   background: @color-sin-alpha;
   border-bottom: 1px solid @color-sin;
   color: @color-black;
@@ -49,9 +50,14 @@ a {
   &:focus,
   &:active {
     cursor: pointer;
+    outline: none;
     background: @color-sin;
     border-bottom: 1px solid @color-black;
   }
+}
+
+ul {
+  list-style: none;
 }
 
 abbr[title] {
@@ -98,9 +104,12 @@ p + p {
 }
 
 .footer {
-    margin-top: @margin-medium;
-    padding: @padding-base 0;
-    font-size: @font-size-small;
+  margin: @margin-medium 0;
+  padding: @padding-medium 0;
+  text-align: center;
+  font-size: @font-size-small;
+  font-weight: @font-weight-light;
+  color: @color-gray;
 }
 
 .clearfix {

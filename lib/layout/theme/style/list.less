@@ -1,0 +1,46 @@
+@import './variable.less';
+@import './common.less';
+@import './header.less';
+
+.list-container {
+  width: @width-post;
+  margin: @margin-small auto;
+}
+
+.list-header {
+  .list-header-title {
+    color: @color-gray-dark;
+    font-size: @font-size-medium;
+  }
+}
+
+.list-content {
+  padding-left: 8 * @padding-base;
+  .list-content-item {
+    margin: @margin-base 0;
+    position: relative;
+    .list-content-item-text {
+      position: absolute;
+      left: -8 * @padding-base;
+      top: @margin-base / 2;
+      color: @color-gray-dark;
+      display: inline-block;
+      font-size: @font-size-base;
+      font-weight: @font-weight-light;
+    }
+    .list-content-item-link {
+      background: transparent;
+      box-shadow: inset 0 -2px 0px 0px @color-sin-alpha;
+      border-bottom: 1px solid @color-sin-alpha;
+      color: @color-black;
+      font-size: @font-size-large;
+      font-weight: @font-weight-bold;
+      &:hover,
+      &:focus,
+      &:active {
+        background: @color-sin-alpha;
+        border-bottom: 1px solid @color-sin-alpha;
+      }
+    }
+  }
+}
