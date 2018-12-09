@@ -1,7 +1,21 @@
 {
   "name": "putup",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Command line interface for static blog generation",
   "main": "index.js",
+  "bin": {
+    "putup": "./bin/putup"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blog",
+    "static",
+    "website",
+    "markdown",
+    "webpack"
+  ],
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.4.2",
@@ -25,7 +39,6 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
     "serve-static": "^1.13.2",
-    "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.26.0"
