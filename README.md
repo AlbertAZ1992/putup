@@ -1,6 +1,6 @@
 # Putup
 
-A Command line interface for static blog generation
+A command line interface for static blog generation.
 
 [Live demo](https://albertaz.com/blog/)
 
@@ -11,7 +11,7 @@ A Command line interface for static blog generation
 
 * Fast blog generation for your markdown writing
 * Simple setup & configuration, no more plugins & development including.
-* Freshing default style without no numerous and complicated theme choise.
+* Freshing style without numerous and complicated theme choices.
 * Internal integration of Webpack production mode.
 * Local server to preview the blog.
 
