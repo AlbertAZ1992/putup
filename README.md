@@ -4,12 +4,15 @@ A Command line interface for static blog generation
 
 [Live demo](https://albertaz.com/blog/)
 
+![Alt text](./demo/d1.png)
+![Alt text](./demo/d2.png)
+
 ## Features
 
 * Fast blog generation for your markdown writing
-* Simple setup & configuration, no more plugins & development including. 
+* Simple setup & configuration, no more plugins & development including.
 * Freshing default style without no numerous and complicated theme choise.
-* Internal integration of Webpack production mode. 
+* Internal integration of Webpack production mode.
 * Local server to preview the blog.
 
 ## Installation
