@@ -1,8 +1,7 @@
-node_modules
+/node_modules
 .DS_Store
-blog
-posts
-dist
-assets
-demo
-config.json
+/blog
+/posts
+/dist
+/assets
+/demo

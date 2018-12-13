@@ -1,6 +1,6 @@
 {
   "name": "putup",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Command line interface for static blog generation",
   "main": "index.js",
   "bin": {
@@ -27,22 +27,22 @@
     "compression-webpack-plugin": "^2.0.0",
     "css-loader": "^1.0.1",
     "express": "^4.16.4",
-    "fs-extra": "^7.0.0",
+    "fs-extra": "^7.0.1",
     "highlight.js": "^9.13.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "inquirer": "^6.2.0",
-    "less": "^3.8.1",
+    "inquirer": "^6.2.1",
+    "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "markdown-it": "^8.4.2",
     "mini-css-extract-plugin": "^0.4.5",
-    "moment": "^2.22.2",
+    "moment": "^2.23.0",
     "nunjucks": "^3.1.4",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
     "serve-static": "^1.13.2",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.2",
-    "webpack": "^4.26.0"
+    "webpack": "^4.27.1"
   }
 }
