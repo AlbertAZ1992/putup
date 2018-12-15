@@ -20,6 +20,11 @@ A command line interface for static blog generation.
 $ npm install putup -g
 ```
 
+When get error log ` EACCES: permission denied`, use:
+```
+$ sudo npm install putup -g
+```
+
 ## Quick Start
 
 **Create your blog**
@@ -62,10 +67,10 @@ the command will build your blog to `<dist>` folder, default `dist`.
 **Preview your blog site**
 
 ```
-$ putup preview
+$ putup preview -p 8088
 ```
 
-A local static server will be hosted at `localhost: 3000`.
+A local static server will be default hosted at `localhost: 3000`.
 
 
 **Get Command help**
