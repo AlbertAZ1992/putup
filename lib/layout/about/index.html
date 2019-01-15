@@ -6,9 +6,11 @@
 
 {% block header %}
 <ul class="header-nav-items">
-  <li class="header-nav-item header-nav-item-home">
-    <h1 class="header-nav-h1">{{site.name}}</h1>
-  </li>
+  {% if site.showname %}
+    <li class="header-nav-item header-nav-item-home">
+      <h1 class="header-nav-h1">{{site.name}}</h1>
+    </li>
+  {% endif %}
   <li class="header-nav-item header-nav-item-blog">
     <a class="header-nav-link" href="/"><i>🎉</i><span>Blog</span></a>
   </li>

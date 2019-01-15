@@ -1,5 +1,6 @@
 {
   "name": "blog",
+  "showname": true,
   "host": "www.mysite.com",
   "description": "",
   "author": "",
